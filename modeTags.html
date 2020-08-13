@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Work Report</title>
+		<link href="styleModeTags.css" rel="stylesheet" type="text/css" />
+		<link href="styleSideMenu.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<!-- <div id="sideMenuContainer" class="sideMenuOverlayShow" style="display:none">
+			<div id="sideMenu" class="sideMenuShow">
+				<div id="showSideMenuButton">
+					<div class="showSideMenuLine"></div>
+					<div class="showSideMenuLine"></div>
+					<div class="showSideMenuLine"></div>
+				</div>
+				<ul>
+					<a href="index.html"><li class="sideMenuButtons">Answer Options/Array Subquestions</li></a>
+					<li class="sideMenuButtons nonSelectable">Mode Tags</li>
+				</ul>
+			</div>
+		</div> -->
+
+		<div id="mainContainer">
+			<header><span id="title">Mode Tags</span> &#128541</header>
+			<div id="inputContainer">
+				<div id="input1" class="sectionContainer">
+					<!-- <div style="border: 1px solid white; height: 100%"></div> -->
+					<div class="inputOptions">
+						<select id="tag1" oninput="inputChange()" class="inputDropdown">
+							<option value="p-o">p-o</option>
+							<option value="e-t">e-t</option>
+							<option value="e-o">e-o</option>
+							<option value="t-o">t-o</option>
+							<!-- <option value="none">none</option> -->
+						</select>
+					</div>
+					<textarea id="textInput1" oninput="inputChange()" placeholder="Answer Options Or Array Subquestions..." class="textInput"></textarea>
+				</div>
+				<div id="input2" class="sectionContainer">
+					<!-- <div style="border: 1px solid white; height: 100%"></div> -->
+					<div class="inputOptions">
+						<select id="tag2" oninput="inputChange()" class="inputDropdown">
+							<option value="p-o">p-o</option>
+							<option value="e-t" selected="selected">e-t</option>
+							<option value="e-o">e-o</option>
+							<option value="t-o">t-o</option>
+							<!-- <option value="none">none</option> -->
+						</select>
+					</div>
+					<textarea id="textInput2" oninput="inputChange()" placeholder="Answer Options Or Array Subquestions..." class="textInput"></textarea>
+				</div>
+			</div>
+			<div id="outputContainer">
+				<div id="input3" class="sectionContainer sectionContainerinactive">
+					<div id="input3Inactive">
+						<div id="openInput3Border" class="centerOfParent" onclick="showHideInput3()">
+							<div id="openInput3" class="centerOfParent">+</div>
+						</div>
+					</div>
+					<div id="input3Active" class="hide">
+						<div class="inputOptions">
+							<select id="tag3" oninput="inputChange()" class="inputDropdown">
+								<option value="p-o">p-o</option>
+								<option value="e-t">e-t</option>
+								<option value="e-o">e-o</option>
+								<option value="t-o" selected="selected">t-o</option>
+								<!-- <option value="none">none</option> -->
+							</select>
+							<button type="button" class="labelButton" id="closeInput3" onclick="showHideInput3()">Close</button>
+						</div>
+						<textarea id="textInput3" oninput="inputChange()" placeholder="Answer Options Or Array Subquestions..." class="textInput"></textarea>
+					</div>
+				</div>
+
+				<!-- <div id="input3" class="sectionContainer" style="display:none;">
+					<div class="inputOptions">
+						<select id="tag3" class="inputDropdown">
+							<option value="p-o">p-o</option>
+							<option value="e-t">e-t</option>
+							<option value="e-o">e-o</option>
+							<option value="t-o" selected="selected">t-o</option>
+						</select>
+						<button type="button" class="labelButton" id="closeInput3" onclick="">Close</button>
+					</div>
+					<textarea id="textInput3" oninput="" placeholder="Answer Options Or Array Subquestions..." class="textInput"></textarea>
+				</div> -->
+				<div id="output" class="sectionContainer">
+					<!-- <div style="border: 1px solid white; height: 100%"></div> -->
+					<textarea id="textOutput" readonly></textarea>
+					<div id="outputOptions">
+						<button type="button" class="labelButton" id="copyOutput" onclick="copyOutput()">Copy</button>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div>
+			<div id="menuOverlay" onclick="showHideSideMenu()"></div>
+			<div id="sideMenuContainer">
+				<div id="sideMenu">
+					<div id="showSideMenuButton" onclick="showHideSideMenu()">
+						<div class="showSideMenuLine"></div>
+						<div class="showSideMenuLine"></div>
+						<div class="showSideMenuLine"></div>
+					</div>
+					<ul id="menuButtonList">
+						<a href="index.html"><li class="sideMenuButtons">Answer Options/Array Subquestions</li></a>
+						<li class="sideMenuButtons nonSelectable">Mode Tags</li>
+						<a href="removeNewLine.html"><li class="sideMenuButtons">Remove "\n"</li></a>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script src="scriptModeTags/main.js"></script>
+		<script src="scriptModeTags/combinedMode.js"></script>
+		<script src="scriptModeTags/combinedOption.js"></script>
+		<script src="scriptModeTags/modeText.js"></script>
+		<script src="scriptModeTags/option.js"></script>
+		<script src="scriptModeTags/mode.js"></script>
+		<script src="scriptModeTags/phone.js"></script>
+		<script src="scriptModeTags/emailText.js"></script>
+		<script src="scriptModeTags/email.js"></script>
+		<script src="scriptModeTags/text.js"></script>
+		<script src="scriptModeTags/noTag.js"></script>
+		<script src="sideMenu.js"></script>
+	</body>
+</html>

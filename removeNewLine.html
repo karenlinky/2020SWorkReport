@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Work Report</title>
+		<link href="styleRemoveNewLine.css" rel="stylesheet" type="text/css" />
+		<link href="styleSideMenu.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div id="mainContainer">
+			<header><span id="title">Remove "\n"</span> &#128522</header>
+			<div id="inputOutputContainer">
+				<div id="inputContainer">
+					<div id="inputOptions">
+						<div id="inputLabel">Text (With Tags):</div>
+					</div>
+					<textarea id="input" oninput="inputChange()" placeholder="Text (With Tags)..."></textarea>
+				</div>
+				<div id="outputContainer">
+					<textarea id="output" placeholder="" readonly></textarea>
+					<div id="outputOptions">
+						<button type="button" class="labelButton" id="copyOutput" onclick="copyOutput()">Copy</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<div id="menuOverlay" onclick="showHideSideMenu()"></div>
+			<div id="sideMenuContainer">
+				<div id="sideMenu">
+					<div id="showSideMenuButton" onclick="showHideSideMenu()">
+						<div class="showSideMenuLine"></div>
+						<div class="showSideMenuLine"></div>
+						<div class="showSideMenuLine"></div>
+					</div>
+					<ul id="menuButtonList">
+						<a href="index.html"><li class="sideMenuButtons">Answer Options/Array Subquestions</li></a>
+						<a href="modeTags.html"><li class="sideMenuButtons">Mode Tags</li></a>
+						<li class="sideMenuButtons nonSelectable">Remove "\n"</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script src="scriptRemoveNewLine/main.js"></script>
+		<script src="sideMenu.js"></script>
+	</body>
+</html>

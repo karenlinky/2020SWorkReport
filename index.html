@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Work Report</title>
+		<link href="styleAnswerSubquestion.css" rel="stylesheet" type="text/css" />
+		<link href="styleSideMenu.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body onload="initClient();">
+		<div id="mainContainer">
+			<header><span id="title">Work Report</span> &#128518</header>
+			<div id="inputOutputWrapper">
+				<div id="inputContainer" class="inputOutputContainer">
+					<div id="inputOptions">
+						<select id="client" onchange="clientChange()" class="inputDropdown">
+							<option value="none" class="dropDownPlaceholder">Client...</option>
+							<option value="ALG">ALG</option>
+							<option value="Binder">Binder</option>
+							<option value="DFM">DFM</option>
+							<option value="EMC">EMC</option>
+							<option value="FM3">FM3</option>
+							<option value="GSG">GSG</option>
+							<option value="Lake">Lake</option>
+							<option value="McL">McL</option>
+							<option value="Ragnar">Ragnar</option>
+							<option value="Tarrance">Tarrance</option>
+						</select>
+						<!-- <button type="button" class="labelButton" id="clearInput" onclick="">Clear</button> -->
+					</div>
+					<form id="inputForm">
+						<section class="inputSection">
+							<div class="labelButtonInputWrapper">
+								<label class="labelInput">Answer Options:</label>
+								<!-- <button class="labelButton">Clear</button> -->
+							</div>
+							<textarea id="textAnswer" oninput="answerChange(this.value)" placeholder="Answer Options..." class="textInput"></textarea>
+						</section>
+						<section class="inputSection">
+							<!-- <div class="labelButtonInputWrapper"> -->
+							<label class="labelInput">Array Subquestions:</label>
+								<!-- <button class="labelButton">Clear</button> -->
+							<!-- </div> -->
+							<textarea id="textSubquestion" oninput="subquestionChange()" placeholder="Array Subquestions..." class="textInput"></textarea>
+						</section>
+						<section id="probeInputSection" class="inputSection inputSectionNoLine" style="display: none">
+							<div class="labelContainer">
+								<label class="labelInput">Probe:</label>
+								<select id="EMCFavorability" onchange="EMCFavChange()" class="inputDropdownInSection" style="display: none">
+									<option value="none" class="dropDownPlaceholder">Favorability...</option>
+									<option value="Y">Yes</option>
+									<option value="N">No</option>
+								</select>
+							</div>
+							<textarea id="textArrayProbe" oninput="arrayProbeChange()" placeholder="Probe of each question..." class="textInputShort"></textarea>
+						</section>
+					</form>
+
+				</div>
+				<div id="outputContainer" class="inputOutputContainer">
+					<textarea id="textOutput" readonly></textarea>
+					<div id="outputButtonContainer">
+						<button type="button" class="labelButton" id="copyOutput" onclick="copyOutput()">Copy</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div>
+			<div id="menuOverlay" onclick="showHideSideMenu()"></div>
+			<div id="sideMenuContainer">
+				<div id="sideMenu">
+					<div id="showSideMenuButton" onclick="showHideSideMenu()">
+						<div class="showSideMenuLine"></div>
+						<div class="showSideMenuLine"></div>
+						<div class="showSideMenuLine"></div>
+					</div>
+					<ul id="menuButtonList">
+						<li class="sideMenuButtons nonSelectable">Answer Options/Array Subquestions</li>
+						<a href="modeTags.html"><li class="sideMenuButtons">Mode Tags</li></a>
+						<a href="removeNewLine.html"><li class="sideMenuButtons">Remove "\n"</li></a>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- <footer>&#128513&#128541&#128521</footer> -->
+		<script src="scriptAnswerSubquestion/outputText/outputText.js"></script>
+		<script src="scriptAnswerSubquestion/outputText/arrayWithProbe.js"></script>
+		<script src="scriptAnswerSubquestion/outputText/arrayWithProbeList.js"></script>
+		<script src="scriptAnswerSubquestion/outputText/EMCFav.js"></script>
+		<script src="scriptAnswerSubquestion/outputText/option.js"></script>
+		<script src="scriptAnswerSubquestion/outputText/optionList.js"></script>
+		<script src="scriptAnswerSubquestion/main.js"></script>
+		<script src="scriptAnswerSubquestion/textType/textType.js"></script>
+		<script src="scriptAnswerSubquestion/textType/ALGAnswer.js"></script>
+		<script src="scriptAnswerSubquestion/textType/ALGSubquestion.js"></script>
+		<script src="scriptAnswerSubquestion/textType/BinderAnswer.js"></script>
+		<script src="scriptAnswerSubquestion/textType/BinderSubquestion.js"></script>
+		<script src="scriptAnswerSubquestion/textType/DFMAnswer.js"></script>
+		<script src="scriptAnswerSubquestion/textType/DFMSubquestion.js"></script>
+		<script src="scriptAnswerSubquestion/textType/EMCAnswer.js"></script>
+		<script src="scriptAnswerSubquestion/textType/EMCSubquestion.js"></script>
+		<script src="scriptAnswerSubquestion/textType/FM3Answer.js"></script>
+		<script src="scriptAnswerSubquestion/textType/FM3Subquestion.js"></script>
+		<script src="scriptAnswerSubquestion/textType/GSGAnswer.js"></script>
+		<script src="scriptAnswerSubquestion/textType/GSGSubquestion.js"></script>
+		<script src="scriptAnswerSubquestion/textType/LakeAnswer.js"></script>
+		<script src="scriptAnswerSubquestion/textType/LakeSubquestion.js"></script>
+		<script src="scriptAnswerSubquestion/textType/McLAnswer.js"></script>
+		<script src="scriptAnswerSubquestion/textType/McLSubquestion.js"></script>
+		<script src="scriptAnswerSubquestion/textType/TarranceAnswer.js"></script>
+		<script src="scriptAnswerSubquestion/textType/TarranceSubquestion.js"></script>
+		<script src="scriptAnswerSubquestion/textType/RagnarAnswer.js"></script>
+		<script src="scriptAnswerSubquestion/textType/RagnarSubquestion.js"></script>
+		<script src="scriptAnswerSubquestion/selectClient/selectClient.js"></script>
+		<script src="scriptAnswerSubquestion/selectClient/clientManager.js"></script>
+		<script src="scriptAnswerSubquestion/selectClient/clientBinder.js"></script>
+		<script src="scriptAnswerSubquestion/selectClient/clientGeneric.js"></script>
+		<script src="scriptAnswerSubquestion/selectClient/clientEMC.js"></script>
+		<script src="scriptAnswerSubquestion/selectClient/clientRagnar.js"></script>
+		<script src="scriptAnswerSubquestion/warning/warningList.js"></script>
+		<script src="scriptAnswerSubquestion/warning/warning.js"></script>
+		<script src="scriptAnswerSubquestion/warning/semicolon.js"></script>
+		<script src="scriptAnswerSubquestion/constants.js"></script>
+		<script src="sideMenu.js"></script>
+	</body>
+</html>

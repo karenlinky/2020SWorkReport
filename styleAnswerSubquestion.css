@@ -1,0 +1,208 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+	--scroll-radius: 25px;
+	--p-color: #b3ecff;
+	/*--p-color: #33e0ff;*/
+	/*--p-color: yellow;*/
+	/*--p-color: #00ff00;*/
+	/*--p-color: #9f29ff;*/
+	--s-color: #2e2e33;
+	--inputOutputPadding: 20px;
+	--input-bg-color: rgb(25,25,25);
+}
+
+body {
+	background-color: black;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7.5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(200,200,200);
+  border-radius: var(--scroll-radius);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--p-color);
+  border-radius: var(--scroll-radius);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#mainContainer{
+	width: 70%;
+	margin: auto;
+	/*margin-bottom: 20px;*/
+	/*min-height: 95vh;*/
+}
+
+header {
+	margin-top: 5vh;
+	font-size: 2em;
+}
+
+#title {
+	text-decoration: underline;
+	font-family: Lucida Sans Unicode;
+	color: var(--p-color);
+}
+
+footer {
+	height: 5vh;
+	width: 100%;
+	border-top: 5px solid var(--p-color);
+	background-color: var(--s-color);
+	text-align: center;
+}
+
+#inputOutputWrapper {
+	margin-top: 3vh;
+	display: flex;
+}
+
+.inputOutputContainer {
+	flex: 1;
+	min-width: 50%;
+	max-width: 50%;
+	height: 70vh;
+	border: 2px var(--p-color) solid;
+	border-radius: 5px;
+	margin: 0 5px;
+	padding: var(--inputOutputPadding);
+	box-sizing: border-box;
+	background-color: var(--s-color);
+}
+
+#inputContainer {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+#inputOptions {
+	margin-right: var(--inputOutputPadding);
+	margin-left: var(--inputOutputPadding);
+	margin-bottom: 2.5%;
+	height: 5%;
+
+	box-sizing: border-box;
+}
+
+.inputDropdown {
+	width: 150px;
+	height: 100%;
+	padding-left: 10px;
+	border-color: var(--p-color);
+	background-color: var(--input-bg-color);
+	color: var(--p-color);
+}
+
+option {
+	/*font-size: 1.25em;*/
+}
+
+.labelContainer {
+	position: relative;
+}
+
+.inputDropdownInSection{
+	position: absolute;
+	right: 0;
+	width: 150px;
+	height: 100%;
+	padding-left: 10px;
+	border-color: var(--p-color);
+	background-color: var(--input-bg-color);
+	color: var(--p-color);
+}
+
+#inputForm {
+	padding: 0 var(--inputOutputPadding);
+	height: 87.5%;
+	overflow: auto;
+	box-sizing: border-box;
+}
+
+.inputSection {
+	border-top: 1px var(--p-color) solid;
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+}
+
+.inputSection:nth-of-type(1) {
+	padding-top: 0;
+	border: none;
+}
+
+.inputSectionNoLine {
+	padding-top: 0;
+	border: none;
+}
+
+.labelButtonInputWrapper {
+	/*position: relative;*/
+}
+
+.labelInput {
+	color: var(--p-color);
+	font-family: Lucida Sans Unicode;
+	font-size: 1.25em;
+}
+
+.labelButton {
+	position: absolute;
+	right: 0;
+	padding: 0.75% 5px;
+}
+
+.textInput {
+	height: 25vh;
+	padding: 10px 15px;
+}
+
+.textInputShort {
+	height: 10vh;
+	padding: 10px 15px;
+}
+
+#textOutput {
+	height: 95%;
+	resize: none;
+	padding: 5px;
+}
+
+.textInput, .textInputShort, #textOutput {
+	border-color: var(--p-color);
+	min-width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+	background-color: var(--input-bg-color);
+	color: var(--p-color);
+	font-size: 1.25em;
+	letter-spacing: 0.5px;
+	line-height: 125%;
+	/*font-family: Lucida Sans Unicode;*/
+}
+
+#outputButtonContainer {
+	position: relative;
+}
+
+#clearInput, #copyOutput {
+	position: absolute;
+	right: 0;
+	background-color: black;
+	color: var(--p-color);
+}
+

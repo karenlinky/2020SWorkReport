@@ -1,0 +1,123 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+	--scroll-radius: 25px;
+	--inputOutputPadding: 20px;
+	--input-bg-color: rgb(25,25,25);
+	--p-font-family: Lucida Sans Unicode;
+}
+
+#sideMenuContainer {
+	/*display: none;*/
+	position: fixed;
+	width: 25%;
+	height: 100%;
+	top: 0;
+	/*left: 0;*/
+	right: -25%;
+	/*bottom: 0;*/
+	/*z-index: 5;*/
+	transition-duration: 0.4s;
+}
+
+#sideMenuContainer.sideMenuShow {
+	right: 0;
+}
+
+#menuOverlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.5);
+	display: none;
+	/*z-index: 5;*/
+}
+
+#menuOverlay.sideMenuShow {
+	display: block;
+}
+
+#sideMenu {
+	position: absolute;
+	/*right: -25%;*/
+	width: 100%;
+	height: 100%;
+	background-color: #2e2e33;
+	border-left: var(--p-color) 2px solid;
+	border-left: black 2px solid;
+	cursor: default;
+	text-align: right;
+	padding-top: 15vh;
+	box-sizing: border-box;
+}
+
+#menuButtonList {
+	height: 100%;
+	overflow: auto;
+}
+
+/*#sideMenu.sideMenuShow {
+	right: 0;
+}*/
+
+#sideMenu a {
+    text-decoration: none;
+}
+
+.sideMenuButtons {
+	list-style-type: none;
+	/*background-color: rgb(100,100,100);*/
+	padding: 35px 20px;
+	color: white;
+	font-family: var(--p-font-family);
+	/*border-top: 1px solid black;*/
+	/*border-bottom: 1px solid var(--p-color);*/
+	border-bottom: 1px solid black;
+	transition-duration: 0.2s;
+}
+
+.sideMenuButtons.nonSelectable {
+	background-color: #65656c;
+}
+
+.sideMenuButtons:hover:not(.nonSelectable) {
+	cursor: pointer;
+	background-color: #65656c;
+}
+
+.sideMenuButtons:nth-child(1) {
+	/*border-top: 1px solid var(--p-color);*/
+	border-top: 1px solid black;
+}
+
+/*.nonSelectable:hover {
+	cursor: default;
+}*/
+
+#showSideMenuButton {
+	position: absolute;
+	left: -60px;
+	top: 30px;
+	height: 30px;
+	width: 30px;
+	background-color: black;
+	border: 2px solid var(--p-color);
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.showSideMenuLine {
+	width: 75%;
+	height: 5%;
+	/*border-width: 2%;*/
+	background-color: var(--p-color);
+	/*border: 2% var(--p-color) solid;*/
+	margin: auto;
+	margin-top: 20%;
+	box-sizing: border-box;
+}
